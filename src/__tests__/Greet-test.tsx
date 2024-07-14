@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { Greet } from "./Greet";
+import { Greet } from "../component/Greet/Greet";
 
 describe("Greet", () => {
-  test("Greet renders correctly", () => {
+  it("Greet renders correctly", () => {
     render(<Greet />);
     const textElement = screen.getByText("Hello");
     expect(textElement).toBeInTheDocument();
