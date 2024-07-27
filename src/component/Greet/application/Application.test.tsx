@@ -20,6 +20,17 @@ describe("Application", () => {
     });
     expect(paragraphElement).toBeInTheDocument();
 
+    const paragraphElement2 = screen.getByText("ields are", { exact: false });
+    expect(paragraphElement2).toBeInTheDocument();
+
+    const paragraphElement3 = screen.getByText(/FIELDS ARE/i);
+    expect(paragraphElement3).toBeInTheDocument();
+
+    const paragraphElement4 = screen.getByText((content) =>
+      content.includes("mandatory")
+    );
+    expect(paragraphElement4).toBeInTheDocument();
+
     const titleElement = screen.getByTitle("close");
     expect(titleElement).toBeInTheDocument();
 
