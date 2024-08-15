@@ -18,7 +18,7 @@ describe("CounterTwo", () => {
         count={0}
         handleIncrement={incrementHandler}
         handleDecrement={decrementHandler}
-      />
+      />,
     );
 
     const incrementBtn = screen.getByRole("button", { name: "Increment" });

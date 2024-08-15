@@ -29,6 +29,7 @@ describe("Application", () => {
     const paragraphElement4 = screen.getByText((content) =>
       content.includes("mandatory")
     );
+
     expect(paragraphElement4).toBeInTheDocument();
 
     const titleElement = screen.getByTitle("close");
@@ -74,6 +75,7 @@ describe("Application", () => {
 
     const submitButtonElement = screen.getByRole("button");
     expect(submitButtonElement).toBeInTheDocument();
+    expect(submitButtonElement).toBeDisabled();
 
     // https://www.w3.org/TR/html-aria/#docconformance
     // ARIA document for all html elements

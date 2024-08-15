@@ -42,7 +42,7 @@ describe("Skills", () => {
       },
       {
         timeout: 2000,
-      }
+      },
     );
     // screen.debug();
     expect(startLearningButton).toBeInTheDocument();
